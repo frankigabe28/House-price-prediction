@@ -3,4 +3,5 @@ streamlit= 1.45.1
 pandas= 2.2.3
 pickle= 3.13.5 
 sklearn= 1.6.1
+joblib= 1.4.2
 
