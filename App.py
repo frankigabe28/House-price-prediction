@@ -14,6 +14,7 @@ if st.button("predict the price"):
     Input=np.array([[SF,NB,NBR,YB,GS]])
     prediction=model.predict(Input)
 
-    st.success(f'{prediction[0]:,.2f} $')
+    st.success(f'{prediction[0]:,.0f} $')
+
 
 
