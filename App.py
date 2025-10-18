@@ -1,8 +1,8 @@
 import streamlit as st
 import pickle
 import numpy as np
-with open('model_saving.pkl','rb')as file:
-    model=pickle.load(file)
+import joblib
+model = joblib.load(open('model_saving.pkl', 'rb'))
 st.title("HOUSE PRICE PREDICTION")
 st.write("Enter the following data")
 SF=st.number_input("Square_Footage",value=0)
@@ -15,6 +15,7 @@ if st.button("predict the price"):
     prediction=model.predict(Input)
 
     st.success(f'{prediction[0]:,.0f} $')
+
 
 
 
